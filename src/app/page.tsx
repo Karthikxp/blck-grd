@@ -2,102 +2,163 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="w-full min-h-screen bg-black relative overflow-hidden">
+      <div className="relative w-full h-screen bg-black overflow-hidden" style={{aspectRatio: '1280/832'}}>
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/background.jpg"
+          alt="Background"
+          fill
+          className="object-cover"
           priority
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        {/* Black overlay */}
+        <div className="absolute inset-0 bg-black/55" />
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Main Content */}
+      <div className="relative z-10 text-white h-full">
+        {/* Top Navigation */}
+        <nav className="absolute top-[3.8vh] left-[1.56vw] right-[1.56vw] flex justify-between items-center">
+          <div className="flex items-center space-x-[5.86vw]">
+            <span className="font-gacor text-[0.486vw] leading-[1.883em]">Services</span>
+            <span className="font-gacor text-[0.486vw] leading-[1.883em]">Pricing</span>
+          </div>
+          <div className="flex items-center space-x-[5.55vw]">
+            <span className="font-gacor text-[0.486vw] leading-[1.883em]">Contact</span>
+            <span className="font-gacor text-[0.486vw] leading-[1.883em]">Team</span>
+          </div>
+        </nav>
+
+        {/* Logo in center top */}
+        <div className="absolute top-[2.52vh] left-1/2 transform -translate-x-1/2">
+          <div className="flex items-center justify-center w-[4vw] h-[4.93vh]">
+            {/* Logo with 6 circles */}
+            <div className="relative">
+              <div className="absolute w-[2vw] h-[3.08vh] border border-[#0D1016] rounded-full top-0 left-[1vw]" />
+              <div className="absolute w-[2vw] h-[3.08vh] border border-[#0D1016] rounded-full top-[0.89vh] left-0" />
+              <div className="absolute w-[2vw] h-[3.08vh] border border-[#0D1016] rounded-full top-[0.89vh] left-[1vw]" />
+              <div className="absolute w-[2vw] h-[3.08vh] border border-[#0D1016] rounded-full top-[0.89vh] left-[2vw]" />
+              <div className="absolute w-[2vw] h-[3.08vh] border border-[#0D1016] rounded-full top-[1.85vh] left-[1vw]" />
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Main Brand Text */}
+        <div className="absolute top-[11.66vh] left-[1.56vw]">
+          <h1 className="font-gacor text-[2.85vw] leading-[1.883em]">Blck Grid</h1>
+        </div>
+
+        {/* Curated Text */}
+        <div className="absolute top-[11.66vh] right-[3.59vw]">
+          <h2 className="font-gacor text-[2.85vw] leading-[1.883em]">CURATED</h2>
+        </div>
+
+        {/* Main Heading */}
+        <div className="absolute top-[26.32vh] right-[1.33vw] text-right">
+          <h3 className="font-roboto-mono font-normal text-[0.875vw] leading-[1.319em] max-w-[24.77vw]">
+            One Studio for your Idea With all the expertise<br />at all the stages
+          </h3>
+        </div>
+
+        {/* Motto */}
+        <div className="absolute top-[45.79vh] left-[1.56vw]">
+          <p className="font-anderson text-[0.681vw] leading-[0.986em] text-right">Motto</p>
+        </div>
+
+        {/* Description */}
+        <div className="absolute top-[44.47vh] left-[11.09vw]">
+          <p className="font-roboto-mono font-light text-[0.875vw] leading-[1.319em] max-w-[17.89vw]">
+            From development to deployment<br /><br />
+            with you at every step. Providing Software service<br /><br />
+            to every enterprise and agency with curated approach for your objective
+          </p>
+        </div>
+
+        {/* Navigation Arrows */}
+        <div className="absolute top-[69.71vh] left-[76.64vw]">
+          <div className="w-[2.34vw] h-[3.61vh] bg-[#D9D9D9] rounded-full flex items-center justify-center">
+            <span className="font-roboto-mono text-[1.53vw] leading-[1.319em] text-black">→</span>
+          </div>
+        </div>
+        <div className="absolute top-[69.71vh] left-[91.56vw]">
+          <div className="w-[2.34vw] h-[3.61vh] bg-white rounded-full flex items-center justify-center">
+            <span className="font-roboto-mono text-[1.53vw] leading-[1.319em] text-black">→</span>
+          </div>
+        </div>
+
+        {/* Bottom Projects Section */}
+        <div className="absolute bottom-[3.85vh] left-[1.56vw] right-[1.56vw]">
+          <div className="flex justify-between items-start">
+            {/* First Column - description and Approach */}
+            <div className="w-[17.42vw] flex flex-col items-center gap-[1.8vh]">
+              <div className="w-[17.27vw] h-[0.12vh] bg-white" />
+              <p className="font-roboto-mono font-light text-[0.875vw] leading-[1.319em] text-center">
+                description and Approach
+              </p>
+            </div>
+
+            {/* Second Column - Shivas Eye Care */}
+            <div className="w-[17.42vw] flex flex-col items-center gap-[1.8vh]">
+              <div className="w-[17.27vw] h-[0.12vh] bg-[#525252]" />
+              <div className="text-center">
+                <p className="font-roboto-mono font-medium text-[0.875vw] leading-[1.319em] mb-[1.8vh]">
+                  Shivas Eye Care
+                </p>
+                <p className="font-roboto-mono font-light text-[0.467vw] leading-[1.319em] w-[9.3vw] mx-auto">
+                  Appointment Booking Page for eye clinic with integrated whatsApp bot functionality
+                </p>
+              </div>
+            </div>
+
+            {/* Third Column - XYZXXXYYYZZ */}
+            <div className="w-[17.42vw] flex flex-col items-center gap-[1.8vh]">
+              <div className="w-[17.27vw] h-[0.12vh] bg-[#525252]" />
+              <div className="text-center">
+                <p className="font-roboto-mono font-medium text-[0.875vw] leading-[1.319em] mb-[1.8vh]">
+                  XYZXXXYYYZZ
+                </p>
+                <p className="font-roboto-mono font-light text-[0.467vw] leading-[1.319em]">
+                  Nulla enim laboris occaecat velit commodo Lorem nulla duis esse ipsum. Sit ut ullamco dolor adipisicing cupidatat aute est enim ullamco eu consequat amet officia Lorem. Ut est est elit minim qui culpa sint quis labore incididunt occaecat
+                </p>
+              </div>
+            </div>
+
+            {/* Fourth Column - XYZXXXYYYZZ */}
+            <div className="w-[17.42vw] flex flex-col items-center gap-[1.8vh]">
+              <div className="w-[17.27vw] h-[0.12vh] bg-[#525252]" />
+              <div className="text-center">
+                <p className="font-roboto-mono font-medium text-[0.875vw] leading-[1.319em] mb-[1.8vh]">
+                  XYZXXXYYYZZ
+                </p>
+                <p className="font-roboto-mono font-light text-[0.467vw] leading-[1.319em]">
+                  Nulla enim laboris occaecat velit commodo Lorem nulla duis esse ipsum. Sit ut ullamco dolor adipisicing cupidatat aute est enim ullamco eu consequat amet officia Lorem. Ut est est elit minim qui culpa sint quis labore incididunt occaecat
+                </p>
+              </div>
+            </div>
+
+            {/* Fifth Column - XYZXXXYYYZZ */}
+            <div className="w-[17.42vw] flex flex-col items-center gap-[1.8vh]">
+              <div className="w-[17.27vw] h-[0.12vh] bg-[#525252]" />
+              <div className="text-center">
+                <p className="font-roboto-mono font-medium text-[0.875vw] leading-[1.319em] mb-[1.8vh]">
+                  XYZXXXYYYZZ
+                </p>
+                <p className="font-roboto-mono font-light text-[0.467vw] leading-[1.319em]">
+                  Nulla enim laboris occaecat velit commodo Lorem nulla duis esse ipsum. Sit ut ullamco dolor adipisicing cupidatat aute est enim ullamco eu consequat amet officia Lorem. Ut est est elit minim qui culpa sint quis labore incididunt occaecat
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* About text */}
+        <div className="absolute bottom-[11.66vh] left-[1.56vw]">
+          <p className="font-gacor text-[2.85vw] leading-[1.883em]">about</p>
+        </div>
+      </div>
+      </div>
     </div>
   );
 }

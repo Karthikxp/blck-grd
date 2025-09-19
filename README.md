@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blck Grid - Portfolio Website
+
+This is a pixel-perfect recreation of the Figma design for Blck Grid, a software development studio. The website showcases their curated approach to software development services.
+
+## Design Details
+
+This Next.js application recreates the exact layout, typography, colors, and positioning from the original Figma design:
+
+- **Dimensions**: 1280px × 832px (desktop design)
+- **Typography**: 
+  - Roboto Mono (Google Fonts) for body text
+  - Serif fallbacks for the custom "Gacor Personal Use" font
+  - System fonts for "Anderson Grotesk" fallback
+- **Background**: High-resolution image with 55% black overlay
+- **Colors**: Exact hex values from Figma design
+- **Layout**: Absolute positioning to match the design precisely
 
 ## Getting Started
 
-First, run the development server:
-
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- ✅ Pixel-perfect recreation of Figma design
+- ✅ Responsive wrapper that maintains aspect ratio
+- ✅ Optimized background image loading
+- ✅ Custom font configurations with fallbacks
+- ✅ Exact typography sizing and line heights
+- ✅ Precise element positioning and spacing
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `/src/app/page.tsx` - Main landing page component
+- `/src/app/layout.tsx` - Root layout with font configuration
+- `/src/app/globals.css` - Global styles and variables
+- `/public/background.jpg` - Background image from Figma
+- `/tailwind.config.ts` - Custom Tailwind configuration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technology Stack
 
-## Deploy on Vercel
+- **Framework**: Next.js 15 with App Router
+- **Styling**: Tailwind CSS with custom configuration
+- **Typography**: Next.js font optimization
+- **Language**: TypeScript
+- **Image Optimization**: Next.js Image component
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- The design maintains its exact 1280×832px dimensions
+- Custom fonts (Gacor Personal Use, Anderson Grotesk) use system fallbacks
+- All measurements and positioning match the Figma specifications
+- The layout is optimized for desktop viewing as per the original design
