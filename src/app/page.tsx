@@ -2,162 +2,79 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen bg-black relative overflow-hidden">
-      <div className="relative w-full h-screen bg-black overflow-hidden" style={{aspectRatio: '1280/832'}}>
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
-        <Image
-          src="/background.jpg"
-          alt="Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* Black overlay */}
-        <div className="absolute inset-0 bg-black/55" />
-      </div>
-
-      {/* Main Content */}
-      <div className="relative z-10 text-white h-full">
-        {/* Top Navigation */}
-        <nav className="absolute top-[3.8vh] left-[1.56vw] right-[1.56vw] flex justify-between items-center">
-          <div className="flex items-center space-x-[5.86vw]">
-            <span className="font-gacor text-[0.486vw] leading-[1.883em]">Services</span>
-            <span className="font-gacor text-[0.486vw] leading-[1.883em]">Pricing</span>
+    <div className="w-full h-screen bg-black relative overflow-hidden">
+      <div className="relative w-full h-full bg-black overflow-hidden flex justify-center items-center">
+        <div className="w-full h-full max-w-[100vw] max-h-[100vh] relative bg-black overflow-hidden" style={{ aspectRatio: '1280/832' }}>
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0">
+            <Image
+              src="/background.jpg"
+              alt="Background"
+              fill
+              className="object-cover"
+              priority
+            />
+            {/* Black overlay */}
+            <div className="absolute inset-0 bg-black/55" />
           </div>
-          <div className="flex items-center space-x-[5.55vw]">
-            <span className="font-gacor text-[0.486vw] leading-[1.883em]">Contact</span>
-            <span className="font-gacor text-[0.486vw] leading-[1.883em]">Team</span>
+
+          {/* Content using exact positioning from your code */}
+          <div className="left-[1.56%] top-[11.66%] absolute text-white text-4xl font-normal font-['Gacor_Personal_Use']">Blck Grid</div>
+          <div className="left-[1.56%] top-[87.38%] absolute text-white text-4xl font-normal font-['Gacor_Personal_Use']">about</div>
+          <div className="left-[76.09%] top-[11.66%] absolute text-white text-4xl font-normal font-['Gacor_Personal_Use']">CURATED</div>
+          <div className="left-[88.91%] top-[3.85%] absolute text-white text-[6.22px] font-normal font-['Gacor_Personal_Use']">Contact</div>
+          <div className="left-[94.46%] top-[3.85%] absolute text-white text-[6.22px] font-normal font-['Gacor_Personal_Use']">Team</div>
+          <div className="left-[1.56%] top-[3.85%] absolute text-white text-[6.22px] font-normal font-['Gacor_Personal_Use']">Services</div>
+          <div className="left-[7.43%] top-[3.85%] absolute text-white text-[6.22px] font-normal font-['Gacor_Personal_Use']">Pricing</div>
+          <div className="left-[1.56%] top-[45.79%] absolute text-right text-white text-[8.73px] font-normal font-['Anderson_Grotesk']">Motto</div>
+          <div className="w-[17.89%] left-[11.09%] top-[44.47%] absolute text-white text-xs font-light font-['Roboto_Mono']">From development to deployment<br/>with you at every step. Providing Software service<br/>to every enterprise and agency with curated approach for your objective</div>
+          
+          {/* Project sections */}
+          <div className="w-[17.42%] left-[1.56%] top-[81.01%] absolute inline-flex flex-col justify-start items-center gap-[1.8%]">
+            <div className="w-[17.27%] h-0 outline outline-1 outline-offset-[-0.50px] outline-white"></div>
+            <div className="self-stretch text-center text-white text-xs font-light font-['Roboto_Mono']">description and Approach</div>
           </div>
-        </nav>
-
-        {/* Logo in center top */}
-        <div className="absolute top-[2.52vh] left-1/2 transform -translate-x-1/2">
-          <div className="flex items-center justify-center w-[4vw] h-[4.93vh]">
-            {/* Logo with 6 circles */}
-            <div className="relative">
-              <div className="absolute w-[2vw] h-[3.08vh] border border-[#0D1016] rounded-full top-0 left-[1vw]" />
-              <div className="absolute w-[2vw] h-[3.08vh] border border-[#0D1016] rounded-full top-[0.89vh] left-0" />
-              <div className="absolute w-[2vw] h-[3.08vh] border border-[#0D1016] rounded-full top-[0.89vh] left-[1vw]" />
-              <div className="absolute w-[2vw] h-[3.08vh] border border-[#0D1016] rounded-full top-[0.89vh] left-[2vw]" />
-              <div className="absolute w-[2vw] h-[3.08vh] border border-[#0D1016] rounded-full top-[1.85vh] left-[1vw]" />
-            </div>
+          
+          <div className="w-[17.42%] left-[20.31%] top-[81.01%] absolute inline-flex flex-col justify-start items-center gap-[1.8%]">
+            <div className="w-[17.27%] h-0 outline outline-1 outline-offset-[-0.50px] outline-[#525252]"></div>
+            <div className="self-stretch text-center text-white text-xs font-medium font-['Roboto_Mono']">Shivas Eye Care</div>
+            <div className="w-[9.3%] text-center text-white text-[5.98px] font-light font-['Roboto_Mono']">Appointment Booking Page for eye clinic with integrated whatsApp bot functionality </div>
           </div>
-        </div>
-
-        {/* Main Brand Text */}
-        <div className="absolute top-[11.66vh] left-[1.56vw]">
-          <h1 className="font-gacor text-[2.85vw] leading-[1.883em]">Blck Grid</h1>
-        </div>
-
-        {/* Curated Text */}
-        <div className="absolute top-[11.66vh] right-[3.59vw]">
-          <h2 className="font-gacor text-[2.85vw] leading-[1.883em]">CURATED</h2>
-        </div>
-
-        {/* Main Heading */}
-        <div className="absolute top-[26.32vh] right-[1.33vw] text-right">
-          <h3 className="font-roboto-mono font-normal text-[0.875vw] leading-[1.319em] max-w-[24.77vw]">
-            One Studio for your Idea With all the expertise<br />at all the stages
-          </h3>
-        </div>
-
-        {/* Motto */}
-        <div className="absolute top-[45.79vh] left-[1.56vw]">
-          <p className="font-anderson text-[0.681vw] leading-[0.986em] text-right">Motto</p>
-        </div>
-
-        {/* Description */}
-        <div className="absolute top-[44.47vh] left-[11.09vw]">
-          <p className="font-roboto-mono font-light text-[0.875vw] leading-[1.319em] max-w-[17.89vw]">
-            From development to deployment<br /><br />
-            with you at every step. Providing Software service<br /><br />
-            to every enterprise and agency with curated approach for your objective
-          </p>
-        </div>
-
-        {/* Navigation Arrows */}
-        <div className="absolute top-[69.71vh] left-[76.64vw]">
-          <div className="w-[2.34vw] h-[3.61vh] bg-[#D9D9D9] rounded-full flex items-center justify-center">
-            <span className="font-roboto-mono text-[1.53vw] leading-[1.319em] text-black">→</span>
+          
+          <div className="w-[17.42%] left-[39.06%] top-[81.01%] absolute inline-flex flex-col justify-start items-center gap-[1.8%]">
+            <div className="w-[17.27%] h-0 outline outline-1 outline-offset-[-0.50px] outline-[#525252]"></div>
+            <div className="self-stretch text-center text-white text-xs font-medium font-['Roboto_Mono']">XYZXXXYYYZZ</div>
+            <div className="self-stretch text-center text-white text-[5.98px] font-light font-['Roboto_Mono']">Nulla enim laboris occaecat velit commodo Lorem nulla duis esse ipsum. Sit ut ullamco dolor adipisicing cupidatat aute est enim ullamco eu consequat amet officia Lorem. Ut est est elit minim qui culpa sint quis labore incididunt occaecat</div>
           </div>
-        </div>
-        <div className="absolute top-[69.71vh] left-[91.56vw]">
-          <div className="w-[2.34vw] h-[3.61vh] bg-white rounded-full flex items-center justify-center">
-            <span className="font-roboto-mono text-[1.53vw] leading-[1.319em] text-black">→</span>
+          
+          <div className="w-[17.42%] left-[57.81%] top-[81.01%] absolute inline-flex flex-col justify-start items-center gap-[1.8%]">
+            <div className="w-[17.27%] h-0 outline outline-1 outline-offset-[-0.50px] outline-[#525252]"></div>
+            <div className="self-stretch text-center text-white text-xs font-medium font-['Roboto_Mono']">XYZXXXYYYZZ</div>
+            <div className="self-stretch text-center text-white text-[5.98px] font-light font-['Roboto_Mono']">Nulla enim laboris occaecat velit commodo Lorem nulla duis esse ipsum. Sit ut ullamco dolor adipisicing cupidatat aute est enim ullamco eu consequat amet officia Lorem. Ut est est elit minim qui culpa sint quis labore incididunt occaecat</div>
           </div>
-        </div>
-
-        {/* Bottom Projects Section */}
-        <div className="absolute bottom-[3.85vh] left-[1.56vw] right-[1.56vw]">
-          <div className="flex justify-between items-start">
-            {/* First Column - description and Approach */}
-            <div className="w-[17.42vw] flex flex-col items-center gap-[1.8vh]">
-              <div className="w-[17.27vw] h-[0.12vh] bg-white" />
-              <p className="font-roboto-mono font-light text-[0.875vw] leading-[1.319em] text-center">
-                description and Approach
-              </p>
-            </div>
-
-            {/* Second Column - Shivas Eye Care */}
-            <div className="w-[17.42vw] flex flex-col items-center gap-[1.8vh]">
-              <div className="w-[17.27vw] h-[0.12vh] bg-[#525252]" />
-              <div className="text-center">
-                <p className="font-roboto-mono font-medium text-[0.875vw] leading-[1.319em] mb-[1.8vh]">
-                  Shivas Eye Care
-                </p>
-                <p className="font-roboto-mono font-light text-[0.467vw] leading-[1.319em] w-[9.3vw] mx-auto">
-                  Appointment Booking Page for eye clinic with integrated whatsApp bot functionality
-                </p>
-              </div>
-            </div>
-
-            {/* Third Column - XYZXXXYYYZZ */}
-            <div className="w-[17.42vw] flex flex-col items-center gap-[1.8vh]">
-              <div className="w-[17.27vw] h-[0.12vh] bg-[#525252]" />
-              <div className="text-center">
-                <p className="font-roboto-mono font-medium text-[0.875vw] leading-[1.319em] mb-[1.8vh]">
-                  XYZXXXYYYZZ
-                </p>
-                <p className="font-roboto-mono font-light text-[0.467vw] leading-[1.319em]">
-                  Nulla enim laboris occaecat velit commodo Lorem nulla duis esse ipsum. Sit ut ullamco dolor adipisicing cupidatat aute est enim ullamco eu consequat amet officia Lorem. Ut est est elit minim qui culpa sint quis labore incididunt occaecat
-                </p>
-              </div>
-            </div>
-
-            {/* Fourth Column - XYZXXXYYYZZ */}
-            <div className="w-[17.42vw] flex flex-col items-center gap-[1.8vh]">
-              <div className="w-[17.27vw] h-[0.12vh] bg-[#525252]" />
-              <div className="text-center">
-                <p className="font-roboto-mono font-medium text-[0.875vw] leading-[1.319em] mb-[1.8vh]">
-                  XYZXXXYYYZZ
-                </p>
-                <p className="font-roboto-mono font-light text-[0.467vw] leading-[1.319em]">
-                  Nulla enim laboris occaecat velit commodo Lorem nulla duis esse ipsum. Sit ut ullamco dolor adipisicing cupidatat aute est enim ullamco eu consequat amet officia Lorem. Ut est est elit minim qui culpa sint quis labore incididunt occaecat
-                </p>
-              </div>
-            </div>
-
-            {/* Fifth Column - XYZXXXYYYZZ */}
-            <div className="w-[17.42vw] flex flex-col items-center gap-[1.8vh]">
-              <div className="w-[17.27vw] h-[0.12vh] bg-[#525252]" />
-              <div className="text-center">
-                <p className="font-roboto-mono font-medium text-[0.875vw] leading-[1.319em] mb-[1.8vh]">
-                  XYZXXXYYYZZ
-                </p>
-                <p className="font-roboto-mono font-light text-[0.467vw] leading-[1.319em]">
-                  Nulla enim laboris occaecat velit commodo Lorem nulla duis esse ipsum. Sit ut ullamco dolor adipisicing cupidatat aute est enim ullamco eu consequat amet officia Lorem. Ut est est elit minim qui culpa sint quis labore incididunt occaecat
-                </p>
-              </div>
-            </div>
+          
+          <div className="w-[17.42%] left-[76.56%] top-[81.01%] absolute inline-flex flex-col justify-start items-center gap-[1.8%]">
+            <div className="w-[17.27%] h-0 outline outline-1 outline-offset-[-0.50px] outline-[#525252]"></div>
+            <div className="self-stretch text-center text-white text-xs font-medium font-['Roboto_Mono']">XYZXXXYYYZZ</div>
+            <div className="self-stretch text-center text-white text-[5.98px] font-light font-['Roboto_Mono']">Nulla enim laboris occaecat velit commodo Lorem nulla duis esse ipsum. Sit ut ullamco dolor adipisicing cupidatat aute est enim ullamco eu consequat amet officia Lorem. Ut est est elit minim qui culpa sint quis labore incididunt occaecat</div>
           </div>
+          
+          <div className="left-[71.64%] top-[26.32%] absolute text-right text-white text-xs font-normal font-['Roboto_Mono']">One Studio for your Idea With all the expertise<br/>at all the stages</div>
+          
+          {/* Logo circles */}
+          <div className="w-[2vw] h-[3.08vh] left-[48.98%] top-[2.52%] absolute bg-white rounded-full border border-[#0d1016]" />
+          <div className="w-[2vw] h-[3.08vh] left-[48.98%] top-[3.41%] absolute bg-white rounded-full border border-[#0d1016]" />
+          <div className="w-[2vw] h-[3.08vh] left-[48.98%] top-[4.37%] absolute bg-white rounded-full border border-[#0d1016]" />
+          <div className="w-[2vw] h-[3.08vh] left-[47.98%] top-[3.41%] absolute bg-white rounded-full border border-[#0d1016]" />
+          <div className="w-[2vw] h-[3.08vh] left-[49.98%] top-[3.41%] absolute bg-white rounded-full border border-[#0d1016]" />
+          <div className="w-[2vw] h-[3.08vh] left-[48.98%] top-[2.52%] absolute bg-white rounded-full border border-[#0d1016]" />
+          
+          {/* Navigation arrows */}
+          <div className="w-[2.34vw] h-[3.61vh] left-[91.56%] top-[69.71%] absolute bg-white rounded-full" />
+          <div className="w-[2.34vw] h-[3.61vh] left-[76.64%] top-[69.71%] absolute rounded-full border border-white" />
+          <div className="left-[77.97%] top-[71.63%] absolute origin-top-left rotate-180 text-right text-white text-xl font-normal font-['Roboto_Mono']">→</div>
+          <div className="left-[92.03%] top-[69.83%] absolute text-right text-black text-xl font-normal font-['Roboto_Mono']">→</div>
         </div>
-
-        {/* About text */}
-        <div className="absolute bottom-[11.66vh] left-[1.56vw]">
-          <p className="font-gacor text-[2.85vw] leading-[1.883em]">about</p>
-        </div>
-      </div>
       </div>
     </div>
   );

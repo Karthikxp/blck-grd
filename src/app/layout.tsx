@@ -10,8 +10,32 @@ const robotoMono = Roboto_Mono({
   weight: ["300", "400", "500"],
 });
 
-// We'll use system fonts as fallbacks for the custom fonts
-// In a real implementation, you would download and include the actual font files
+// Local fonts for custom typefaces
+const gacorFont = localFont({
+  src: [
+    {
+      path: "../../public/Gacor.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-gacor-personal-use",
+  display: "swap",
+  fallback: ["serif"],
+});
+
+const andersonGrotesk = localFont({
+  src: [
+    {
+      path: "../../public/anderson.otf",
+      weight: "400", 
+      style: "normal",
+    },
+  ],
+  variable: "--font-anderson-grotesk",
+  display: "swap",
+  fallback: ["system-ui", "sans-serif"],
+});
 
 export const metadata: Metadata = {
   title: "Blck Grid - One Studio for your Idea",
@@ -26,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${robotoMono.variable} antialiased`}
+        className={`${robotoMono.variable} ${gacorFont.variable} ${andersonGrotesk.variable} antialiased`}
       >
         {children}
       </body>

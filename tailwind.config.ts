@@ -14,8 +14,9 @@ export default {
       },
       fontFamily: {
         'roboto-mono': ['var(--font-roboto-mono)', 'monospace'],
-        'gacor': ['serif'], // Fallback for Gacor Personal Use
-        'anderson': ['system-ui', 'sans-serif'], // Fallback for Anderson Grotesk
+        'Roboto_Mono': ['var(--font-roboto-mono)', 'monospace'],
+        'Gacor_Personal_Use': ['var(--font-gacor-personal-use)', 'serif'],
+        'Anderson_Grotesk': ['var(--font-anderson-grotesk)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'figma-xl': 'clamp(18px, 2.85vw, 36.47px)',

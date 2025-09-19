@@ -4,16 +4,18 @@ This is a pixel-perfect recreation of the Figma design for Blck Grid, a software
 
 ## Design Details
 
-This Next.js application recreates the exact layout, typography, colors, and positioning from the original Figma design:
+This Next.js application recreates the exact layout, typography, colors, and positioning from the original Figma design with full screen responsiveness:
 
-- **Dimensions**: 1280px × 832px (desktop design)
+- **Responsive Layout**: Fills entire screen width and height while maintaining proportions
+- **Viewport Units**: Uses vw (viewport width) and vh (viewport height) for perfect scaling
 - **Typography**: 
   - Roboto Mono (Google Fonts) for body text
   - Serif fallbacks for the custom "Gacor Personal Use" font
   - System fonts for "Anderson Grotesk" fallback
+  - Responsive font sizes using clamp() for optimal readability
 - **Background**: High-resolution image with 55% black overlay
 - **Colors**: Exact hex values from Figma design
-- **Layout**: Absolute positioning to match the design precisely
+- **Layout**: Viewport-relative positioning for pixel-perfect scaling
 
 ## Getting Started
 
@@ -32,11 +34,13 @@ npm run dev
 ## Features
 
 - ✅ Pixel-perfect recreation of Figma design
-- ✅ Responsive wrapper that maintains aspect ratio
+- ✅ Full-screen responsive layout using viewport units
+- ✅ Maintains exact proportions across all screen sizes
 - ✅ Optimized background image loading
 - ✅ Custom font configurations with fallbacks
-- ✅ Exact typography sizing and line heights
-- ✅ Precise element positioning and spacing
+- ✅ Responsive typography with clamp() for optimal scaling
+- ✅ Viewport-relative positioning for perfect element placement
+- ✅ Fills entire screen width while preserving design integrity
 
 ## Project Structure
 
