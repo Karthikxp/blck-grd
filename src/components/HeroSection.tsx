@@ -31,7 +31,7 @@ export default function HeroSection({ title, subtitle, motto, tagline }: HeroSec
           <span className="text-white text-[8.73px] font-normal font-['Anderson_Grotesk'] text-right mt-2">
             {motto.label}
           </span>
-          <div className="w-[229px] text-white text-xs font-light font-['Roboto_Mono'] leading-relaxed">
+          <div className="w-[229px] text-white text-[11.21px] font-light font-['Roboto_Mono'] leading-relaxed">
             {motto.description.split('<br/>').map((line, index) => (
               <div key={index}>{line}</div>
             ))}
@@ -41,7 +41,7 @@ export default function HeroSection({ title, subtitle, motto, tagline }: HeroSec
 
       {/* Tagline */}
       <div className="absolute right-[53px] top-[245px]">
-        <p className="text-white text-xs font-normal font-['Roboto_Mono'] text-right leading-relaxed">
+        <p className="text-white text-[11.21px] font-normal font-['Roboto_Mono'] text-right leading-relaxed">
           {tagline.split('<br/>').map((line, index) => (
             <div key={index}>{line}</div>
           ))}

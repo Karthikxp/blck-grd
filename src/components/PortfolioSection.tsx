@@ -48,7 +48,7 @@ function ProjectCard({ project, isFirst }: ProjectCardProps) {
       <div className={`w-[221px] h-0 border-t ${borderColor}`} />
       
       {/* Project Title */}
-      <div className={`self-stretch text-center text-white text-xs ${fontWeight} font-['Roboto_Mono']`}>
+      <div className={`self-stretch text-center text-white text-[11.21px] ${fontWeight} font-['Roboto_Mono']`}>
         {project.title}
       </div>
       
