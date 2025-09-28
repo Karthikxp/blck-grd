@@ -41,25 +41,15 @@ export default function HeroSection({ title, subtitle, motto, tagline }: HeroSec
 
       {/* Tagline */}
       <div className="absolute right-[53px] top-[245px]">
-        <p className="text-white text-[11.21px] font-normal font-['Roboto_Mono'] text-right leading-relaxed">
+        <div className="text-white text-[11.21px] font-normal font-['Roboto_Mono'] text-right leading-relaxed">
           {tagline.split('<br/>').map((line, index) => (
             <div key={index}>{line}</div>
           ))}
-        </p>
+        </div>
       </div>
 
       {/* Decorative Elements */}
       <div className="absolute left-[603px] top-[87px] w-[16.62px] h-[14.55px] bg-white border border-white" />
-      
-      {/* Navigation Arrows */}
-      <div className="absolute right-[53px] top-[601px] flex gap-[191px] items-center">
-        <button className="w-[30px] h-[30px] rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors group">
-          <span className="text-white text-xl font-normal font-['Roboto_Mono'] rotate-180 group-hover:text-black">→</span>
-        </button>
-        <button className="w-[30px] h-[30px] bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
-          <span className="text-black text-xl font-normal font-['Roboto_Mono']">→</span>
-        </button>
-      </div>
     </section>
   );
 }
