@@ -50,8 +50,20 @@ All font sizes use `clamp()` CSS function for responsive scaling:
 - Viewport-relative units (vw) provide proportional scaling
 
 ## CSS Variables
-- `--font-gacor`: Gacor Personal Use
-- `--font-anderson`: Anderson Grotesk  
+- `--font-gacor-personal-use`: Gacor Personal Use
+- `--font-anderson-grotesk`: Anderson Grotesk  
 - `--font-roboto-mono`: Roboto Mono
 
-These variables are applied through Tailwind CSS utility classes.
+## Font Loading Method
+Fonts are loaded using dual approach:
+1. **@font-face declarations** in `globals.css` for direct CSS access
+2. **Next.js localFont()** for optimized loading and CSS variables
+3. **Tailwind CSS utilities** using arbitrary font family syntax:
+   - `font-['Gacor_Personal_Use']`
+   - `font-['Anderson_Grotesk']`
+   - `font-['Roboto_Mono']`
+
+## Implementation Notes
+- Font files must be in `/public/` directory
+- Tailwind config includes font family mappings
+- CSS variables are automatically injected into document
